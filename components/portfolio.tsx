@@ -164,10 +164,10 @@ export function Portfolio() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8">About Me</h2>
           <p className="text-lg mb-4">
-            I'm a highly experienced software developer with a strong background in financial trading automation, blockchain development, and AI modeling. With over 10 years of experience in C, and 2 years each in Node.js and Golang, I've successfully led and overseen large-scale operations, including managing an 80Kwh crypto mining farm and overseeing blockchain funding processes for a crypto exchange.
+            I&apos;m a highly experienced software developer with a strong background in financial trading automation, blockchain development, and AI modeling. With over 10 years of experience in C, and 2 years each in Node.js and Golang, I&apos;ve successfully led and overseen large-scale operations, including managing an 80Kwh crypto mining farm and overseeing blockchain funding processes for a crypto exchange.
           </p>
           <p className="text-lg">
-            My expertise spans across various domains, including trading system development, AI model creation, and blockchain middleware implementation. I'm passionate about leveraging technology to create efficient, scalable, and innovative solutions in the financial and blockchain sectors.
+            My expertise spans across various domains, including trading system development, AI model creation, and blockchain middleware implementation. I&apos;m passionate about leveraging technology to create efficient, scalable, and innovative solutions in the financial and blockchain sectors.
           </p>
         </div>
       </section>
@@ -249,7 +249,7 @@ export function Portfolio() {
           <h2 className="text-3xl font-bold mb-8">Get in Touch</h2>
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-8 md:mb-0">
-              <p className="text-lg mb-4">Interested in collaborating or discussing a project? Let's connect!</p>
+              <p className="text-lg mb-4">Interested in collaborating or discussing a project? Let&apos;s connect!</p>
               <div className="flex space-x-4">
                 <a href="https://github.com/luxeave" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                   <Github />
