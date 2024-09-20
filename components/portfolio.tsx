@@ -164,7 +164,7 @@ export function Portfolio() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8">About Me</h2>
           <p className="text-lg mb-4">
-            I&apos;m a highly experienced software developer with a strong background in financial trading automation, blockchain development, and AI modeling. With over 10 years of experience in C, and 2 years each in Node.js and Golang, I&apos;ve successfully led and overseen large-scale operations, including managing an 80Kwh crypto mining farm and overseeing blockchain funding processes for a crypto exchange.
+            I&apos;m a highly experienced software developer with a strong background in financial trading automation, blockchain development, and AI modeling. With over 10 years of experience in C, and 4 years each in Node.js and Golang, I&apos;ve successfully led and overseen large-scale operations, including acting as Wallet Lead Dev for Tokenomy, acting as core developer for Jagad's open-source ICSI ICP Smart-Contract Project, and managing an 80Kwh crypto mining farm and overseeing blockchain funding processes for a crypto exchange.
           </p>
           <p className="text-lg">
             My expertise spans across various domains, including trading system development, AI model creation, and blockchain middleware implementation. I&apos;m passionate about leveraging technology to create efficient, scalable, and innovative solutions in the financial and blockchain sectors.
