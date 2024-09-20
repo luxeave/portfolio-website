@@ -177,7 +177,7 @@ export function Portfolio() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8">Skills</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {['Node.js', 'MongoDB', 'Git', 'C++', 'Python', 'Docker', 'Golang', 'JavaScript', 'PHP', 'MySQL', 'Linux/Unix', 'MQL4', 'PineScript', 'Elixir'].map((skill) => (
+            {['Node.js', 'MongoDB', 'Git', 'C++', 'Rust','Python', 'Docker', 'Golang', 'JavaScript', 'PHP', 'MySQL', 'Linux/Unix', 'MQL4', 'PineScript', 'Elixir'].map((skill) => (
               <div key={skill} className="bg-gray-800 rounded-lg p-4 text-center">
                 {skill}
               </div>
