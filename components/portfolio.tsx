@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react'
 import { Menu, X, Github, Linkedin, Mail, ExternalLink, Server, Database, Code, ChevronLeft, ChevronRight } from 'lucide-react'
+import axios from 'axios'
 
 const ProjectCard: React.FC<{ title: string; description: string; icon: React.ReactNode; subProjects: { title: string; description: string; technologies: string; }[] }> = ({ title, description, icon, subProjects }) => {
   const [currentSubProject, setCurrentSubProject] = useState(0);
@@ -40,6 +41,8 @@ const ProjectCard: React.FC<{ title: string; description: string; icon: React.Re
 export function Portfolio() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('home')
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' })
+  const [formStatus, setFormStatus] = useState('')
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
 
@@ -109,6 +112,22 @@ export function Portfolio() {
       ],
     },
   ];
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value })
+  }
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    setFormStatus('Sending...')
+    try {
+      await axios.post('/api/contact', formData)
+      setFormStatus('Message sent successfully!')
+      setFormData({ name: '', email: '', message: '' })
+    } catch (error) {
+      setFormStatus('Failed to send message. Please try again.')
+    }
+  }
 
   return (
     <div className="min-h-screen bg-gray-900 text-gray-100">
@@ -257,18 +276,43 @@ export function Portfolio() {
                 <a href="https://www.linkedin.com/in/stephen-antoni-33840258/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                   <Linkedin />
                 </a>
-                <a href="mailto:luxeaves@gmail.com" className="text-gray-400 hover:text-white transition-colors">
+                <a href="mailto:stephen@luxeave.com" className="text-gray-400 hover:text-white transition-colors">
                   <Mail />
                 </a>
               </div>
             </div>
-            <form className="w-full md:w-1/2">
-              <input type="text" placeholder="Name" className="w-full mb-4 p-2 bg-gray-700 rounded" />
-              <input type="email" placeholder="Email" className="w-full mb-4 p-2 bg-gray-700 rounded" />
-              <textarea placeholder="Message" rows={4} className="w-full mb-4 p-2 bg-gray-700 rounded"></textarea>
+            <form onSubmit={handleSubmit} className="w-full md:w-1/2">
+              <input
+                type="text"
+                name="name"
+                placeholder="Name"
+                value={formData.name}
+                onChange={handleInputChange}
+                className="w-full mb-4 p-2 bg-gray-700 rounded"
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={formData.email}
+                onChange={handleInputChange}
+                className="w-full mb-4 p-2 bg-gray-700 rounded"
+                required
+              />
+              <textarea
+                name="message"
+                placeholder="Message"
+                rows={4}
+                value={formData.message}
+                onChange={handleInputChange}
+                className="w-full mb-4 p-2 bg-gray-700 rounded"
+                required
+              ></textarea>
               <button type="submit" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-colors">
                 Send Message
               </button>
+              {formStatus && <p className="mt-4 text-center">{formStatus}</p>}
             </form>
           </div>
         </div>
