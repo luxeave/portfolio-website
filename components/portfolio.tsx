@@ -186,7 +186,7 @@ export function Portfolio() {
             I&apos;m a highly experienced software developer with a strong background in financial trading automation, blockchain development, and AI modeling. With over 10 years of experience in C, and 4 years each in Node.js and Golang, I&apos;ve successfully led and overseen large-scale operations, including acting as Wallet Lead Dev for Tokenomy, acting as core developer for Jagad&apos;s open-source ICSI ICP Smart-Contract Project, and managing an 80Kwh crypto mining farm and overseeing blockchain funding processes for a crypto exchange.
           </p>
           <p className="text-lg">
-            My expertise spans across various domains, including trading system development, AI model creation, and blockchain middleware implementation. I&apos;m passionate about leveraging technology to create efficient, scalable, and innovative solutions in the financial and blockchain sectors.
+            My expertise spans across various domains, including trading system development, Machine Learning model training & deployment, blockchain middleware implementation and smart contract development. I&apos;m passionate about leveraging technology to create efficient, scalable, and innovative solutions in the financial and blockchain sectors.
           </p>
         </div>
       </section>
