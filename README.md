@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Stephen Antoni's Portfolio Website
+
+This repository contains the source code for Stephen Antoni's personal portfolio website. It's a modern, responsive single-page application built with Next.js and React, showcasing Stephen's skills, experience, and projects as a Backend Engineer.
+
+## Features
+
+- Responsive design with mobile-friendly navigation
+- Smooth scrolling between sections
+- Dynamic project cards with sub-project navigation
+- Contact form with server-side handling
+- Skills and experience sections
+- Integration with external services (GitHub, LinkedIn)
+
+## Technologies Used
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Axios for API requests
+- Lucide React for icons
+
+## Prerequisites
+
+Before you begin, ensure you have the following installed:
+- Node.js (v14 or later)
+- npm or yarn
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository:
+   ```
+   git clone https://github.com/yourusername/stephen-antoni-portfolio.git
+   cd stephen-antoni-portfolio
+   ```
 
-```bash
-npm run dev
+2. Install dependencies:
+   ```
+   npm install
+   # or
+   yarn install
+   ```
+
+3. Set up environment variables:
+   Create a `.env.local` file in the root directory and add the following variables:
+   ```
+   MAILGUN_API_KEY=your_mailgun_api_key
+   MAILGUN_DOMAIN=your_mailgun_domain
+   MAILGUN_FROM=your_sender_email
+   CONTACT_EMAIL=your_contact_email
+   ```
+
+4. Run the development server:
+   ```
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+
+## Building for Production
+
+To create a production-ready build:
+
+```
+npm run build
 # or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+yarn build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deployment
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This project can be easily deployed to various platforms. Here are instructions for deploying locally:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Local Deployment
 
-## Learn More
+1. Build the project:
+   ```
+   npm run build
+   # or
+   yarn build
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. Start the production server:
+   ```
+   npm start
+   # or
+   yarn start
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+3. Access the website at `http://localhost:3000`
